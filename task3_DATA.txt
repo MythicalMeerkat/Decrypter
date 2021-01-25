@@ -1,0 +1,13 @@
+%PDF-1.4 (ASCII) -> 	25 50 44 46 2d 31 2e 34 | 255044462d312e34
+
+encrypted header -> 	2c eb 60 05 f3 fd 74 a6 | 2ceb6005f3fd74a6
+
+XOR (Hex) = 		09 bb 24 43 de cc 5a 92
+
+Converted to Little Endian Result = 92 5A CC DE 43 24 BB 09
+
+
+1) Convert "%PDF-1.4" to Hex
+2) Get Encrypted Header using XXD-p
+3) Hex secret.pdf header XOR Hex secret.pdf.enc1
+4) Take result of XOR Operation and convert to little Endian
